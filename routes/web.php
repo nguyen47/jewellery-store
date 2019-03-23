@@ -21,3 +21,5 @@ Route::get('/test', function () {
 
 Route::resource('categories', 'Admin\CategoryController')->except('destroy');
 Route::get('categories/destroy/{slug}', 'Admin\CategoryController@destroy')->name('categories.destroy');
+Route::resource('products', 'Admin\ProductController')->except('destroy');
+Route::get('products/destroy/{slug}', 'Admin\ProductController@destroy')->name('products.destroy');
