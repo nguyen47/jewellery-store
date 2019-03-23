@@ -37,7 +37,21 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new Category;
+
+        $imageName = time() . '.' . request()->image->getClientOriginalExtension();
+
+        request()->image->move(public_path('images'), $imageName);
+
+        $category->image = $imageName;
+        $category->name = $request->name;
+        $category->description = $request->description;
+
+        // $category->create($request->all()); *** Text Only ***
+
+        $category->save();
+
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -46,9 +60,12 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        return view('admin.categories.show');
+        // $id -> FindOrFail($id);
+        // slug -> Select * from category where slug = $slug;
+        $category = Category::where('slug', $slug)->first();
+        return view('admin.categories.show', compact('category'));
     }
 
     /**
@@ -57,9 +74,10 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        return view('admin.categories.edit');
+        $category = Category::where('slug', $slug)->first();
+        return view('admin.categories.edit', compact('category'));
     }
 
     /**
@@ -69,9 +87,23 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $slug)
     {
-        //
+        $category = Category::where('slug', $slug)->first();
+
+        if (isset($request->image)) {
+            // Delete the previous image
+            $imageName = time() . '.' . request()->image->getClientOriginalExtension();
+            request()->image->move(public_path('images'), $imageName);
+            $category->image = $imageName;
+        }
+        $category->name = $request->name;
+        $category->slug = null; // Document told that
+        $category->description = $request->description;
+
+        $category->save();
+
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -80,8 +112,13 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug)
     {
-        //
+        // Form : GET, POST - Create, PUT - Update, DELETE - delete -> Write API
+        // HTMl Form : GET POST
+        $category = Category::where('slug', $slug)->first();
+        // Delete current image
+        $category->delete($category);
+        return redirect()->route('categories.index');
     }
 }

@@ -19,4 +19,5 @@ Route::get('/test', function () {
     return view('admin.layouts.masterLayout');
 });
 
-Route::resource('categories', 'Admin\CategoryController');
+Route::resource('categories', 'Admin\CategoryController')->except('destroy');
+Route::get('categories/destroy/{slug}', 'Admin\CategoryController@destroy')->name('categories.destroy');

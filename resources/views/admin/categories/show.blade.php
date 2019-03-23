@@ -23,7 +23,11 @@
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-	                <span>Thêm mới</span>
+                    <span>Chi Tiết</span>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <span>{{$category->name}}</span>
 	            </li>
 	        </ul>
 	    </div>
@@ -45,19 +49,19 @@
                                         <div class="form-group">
                                             <label class="col-md-3 control-label">Tên Danh Mục</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  Et tempora qui et maxime iusto debitis praesentium.  </p>
+                                                <p class="form-control-static">  {{$category->name}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-3 control-label">Mô Tả</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static"> A nulla soluta accusamus labore porro. Ut animi fuga labore rem sunt ipsam nemo. Ut eos voluptatibus perferendis nam veritatis. Non harum et cum. A nulla soluta accusamus labore porro. Ut animi fuga labore rem sunt ipsam nemo. Ut eos voluptatibus perferendis nam veritatis. Non harum et cum. A nulla soluta accusamus labore porro. Ut animi fuga labore rem sunt ipsam nemo. Ut eos voluptatibus perferendis nam veritatis. Non harum et cum. </p>
+                                                <p class="form-control-static"> {{$category->description}} </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-3 control-label">Hình Ảnh</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static"> email@example.com </p>
+                                                <p class="form-control-static"> <img height="150" width="240" src="{{asset('images') .'/' . $category->image}}" /> </p>
                                             </div>
                                         </div>
                                         
@@ -67,8 +71,6 @@
                                             <div class="col-md-12">
                                                 <div class="row">
                                                     <div class="col-md-offset-3 col-md-9">
-                                                        <button type="submit" class="btn green">
-                                                            <i class="fa fa-check"></i> Gửi</button>
                                                         <a href="{{route('categories.index')}}" class="btn default">Quay lại</a>
                                                     </div>
                                                 </div>

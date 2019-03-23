@@ -27,7 +27,7 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>Et tempora qui et maxime iusto debitis praesentium. </span>
+                    <span> {{$category->name}} </span>
 	            </li>
 	        </ul>
 	    </div>
@@ -44,28 +44,32 @@
                             </div>
                             <div class="portlet-body form">
                                 <!-- BEGIN FORM-->
-                                <form action="#" method="POST" class="form-horizontal form-bordered">
+                                <form action="{{route('categories.update', $category->slug)}}" method="POST" class="form-horizontal form-bordered" enctype="multipart/form-data">
+                                <input name="_method" type="hidden" value="PUT">
+                                    @csrf
                                     <div class="form-body">
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Tên danh mục</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="name" placeholder="Tên danh mục" class="form-control" />
-                                                <span style="color: red"> Error </span>
+                                                <input type="text" name="name" placeholder="Tên danh mục" class="form-control" value="{{$category->name}}" />
+                                                {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Mô tả</label>
                                             <div class="col-md-9">
-                                                <textarea name="email" rows="5" placeholder="Mô tả" class="form-control"></textarea>
-                                                <span style="color: red"> Error </span>
+                                                <textarea name="description" rows="5" placeholder="Mô tả" class="form-control">{{$category->description}}</textarea>
+                                                {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Hình ảnh</label>
                                             <div class="col-md-9">
-                                                <input type="file" id="exampleInputFile">
+                                                <input type="file" name="image" id="exampleInputFile">
+                                                <br>
+                                                <img height="150" width="240" src="{{asset('images') .'/' . $category->image}}" />
                                                 <p class="help-block"> some help text here. </p>
-                                                <span style="color: red"> Error </span>
+                                                {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                     </div>

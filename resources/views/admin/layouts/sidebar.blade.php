@@ -24,12 +24,6 @@
                 <span class="title">Dashboard</span>
             </a>
         </li>
-        <li class="nav-item start ">
-            <a href="" class="nav-link nav-toggle">
-                <i class="icon-home"></i>
-                <span class="title">Trang khách hàng</span>
-            </a>
-        </li>
         <li class="heading">
             <h3 class="uppercase">Danh mục</h3>
         </li>

@@ -42,7 +42,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="btn-group">
-                                        <a href="#" id="sample_editable_1_new" class="btn sbold green"> Thêm mới
+                                        <a href="{{route('categories.create')}}" id="sample_editable_1_new" class="btn sbold green"> Thêm mới
                                             <i class="fa fa-plus"></i>
                                         </a>
                                     </div>
@@ -52,6 +52,7 @@
                         <table class="table table-striped table-bordered table-hover" id="sample_1">
                             <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th> Tên </th>
                                     <th> Hình Ảnh </th>
                                     <th> Hành động </th>
@@ -59,19 +60,20 @@
                             </thead>
                             <tbody>
                                 @foreach ($categories as $category)
-                                <tr class="odd gradeX">
+                                    <tr class="odd gradeX">
+                                        <td> {{$category->id}} </td>
                                         <td> {{$category->name}} </td>
                                         <td>
-                                            <img src="{{$category->image}}" /> 
+                                            <img src="{{asset('images') .  '/' .$category->image}}" width="80" height="50" /> 
                                         </td>
                                         <td>
-                                            <a href="#" class="btn green">
+                                            <a href="{{route('categories.edit', $category->slug)}}" class="btn green">
                                                 <i class="fa fa-pencil"></i>
                                             </a>
-                                            <a href="#" class="btn purple">
+                                            <a href="{{route('categories.show', $category->slug)}}" class="btn purple">
                                                 <i class="fa fa-eye"></i>
                                             </a>
-                                            <a class="btn red" data-toggle="confirmation" data-popout="true" data-original-title="Bạn có chắc không ?" href="#">
+                                            <a class="btn red" data-toggle="confirmation" data-popout="true" data-original-title="Bạn có chắc không ?" href="{{route('categories.destroy', $category->slug)}}">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                         </td>
