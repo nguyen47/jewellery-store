@@ -24,4 +24,6 @@ Route::get('categories/destroy/{slug}', 'Admin\CategoryController@destroy')->nam
 Route::resource('products', 'Admin\ProductController')->except('destroy');
 Route::get('products/destroy/{slug}', 'Admin\ProductController@destroy')->name('products.destroy');
 Route::resource('banners', 'Admin\BannerController')->except('destroy');
-Route::get('banners/destroy/{slug}', 'Admin\BannerController@destroy')->name('banners.destroy');
+Route::get('banners/destroy/{id}', 'Admin\BannerController@destroy')->name('banners.destroy');
+Route::resource('users', 'Admin\UserController')->except('destroy');
+Route::get('users/destroy/{id}', 'Admin\UserController@destroy')->name('users.destroy');
