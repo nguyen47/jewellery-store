@@ -9,8 +9,8 @@
     <div class="page-content">
         <!-- BEGIN PAGE HEADER-->
         <!-- BEGIN PAGE TITLE-->
-        <h1 class="page-title"> Sản phẩm
-            <small>Danh sách sản phẩm</small>
+        <h1 class="page-title"> Hình ảnh
+            <small>Danh sách hình ảnh</small>
         </h1>
         <!-- END PAGE TITLE-->
         <!-- BEGIN PAGE BAR -->
@@ -21,7 +21,7 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>Sản phẩm</span>
+                    <span>Hình ảnh</span>
                 </li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
                     <div class="portlet-title">
                         <div class="caption font-dark">
                             <i class="fa fa-navicon font-dark"></i>
-                            <span class="caption-subject bold uppercase"> Sản phẩm</span>
+                            <span class="caption-subject bold uppercase"> HÌnh ảnh</span>
                         </div>
                     </div>
                     <div class="portlet-body">
@@ -42,7 +42,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="btn-group">
-                                        <a href="{{route('products.create')}}" id="sample_editable_1_new" class="btn sbold green"> Thêm mới
+                                        <a href="{{route('banners.create')}}" id="sample_editable_1_new" class="btn sbold green"> Thêm mới
                                             <i class="fa fa-plus"></i>
                                         </a>
                                     </div>
@@ -53,27 +53,27 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th> Tên </th>
+                                    <th> Product_id </th>
                                     <th> Hình Ảnh </th>
                                     <th> Hành động </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($products as $product)
+                                @foreach ($banners as $banner)
                                     <tr class="odd gradeX">
-                                        <td> {{$product->id}} </td>
-                                        <td> {{$product->name}} </td>
+                                        <td> {{$banner->id}} </td>
+                                        <td> {{$banner->product_id}} </td>
                                         <td>
-                                            <img src="{{asset('images') .  '/' .$product->image}}" width="80" height="50" /> 
+                                            <img src="{{asset('images') .  '/' .$banner->image}}" width="80" height="50" /> 
                                         </td>
                                         <td>
-                                            <a href="{{route('products.edit', $product->slug)}}" class="btn green">
+                                            <a href="{{route('banners.edit', $banner->id)}}" class="btn green">
                                                 <i class="fa fa-pencil"></i>
                                             </a>
-                                            <a href="{{route('products.show', $product->slug)}}" class="btn purple">
+                                            <a href="{{route('banners.show', $banner->id)}}" class="btn purple">
                                                 <i class="fa fa-eye"></i>
                                             </a>
-                                            <a class="btn red" data-toggle="confirmation" data-popout="true" data-original-title="Bạn có chắc không ?" href="{{route('products.destroy', $product->slug)}}">
+                                            <a class="btn red" data-toggle="confirmation" data-popout="true" data-original-title="Bạn có chắc không ?" href="{{route('banners.destroy', $banner->id)}}">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                         </td>
