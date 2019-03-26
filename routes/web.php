@@ -27,3 +27,5 @@ Route::resource('banners', 'Admin\BannerController')->except('destroy');
 Route::get('banners/destroy/{id}', 'Admin\BannerController@destroy')->name('banners.destroy');
 Route::resource('users', 'Admin\UserController')->except('destroy');
 Route::get('users/destroy/{id}', 'Admin\UserController@destroy')->name('users.destroy');
+Route::resource('contacts', 'Admin\ContactController')->except('destroy');
+Route::get('contacts/destroy/{id}', 'Admin\ContactController@destroy')->name('contacts.destroy');
