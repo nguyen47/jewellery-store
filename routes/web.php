@@ -29,3 +29,8 @@ Route::resource('users', 'Admin\UserController')->except('destroy');
 Route::get('users/destroy/{id}', 'Admin\UserController@destroy')->name('users.destroy');
 Route::resource('contacts', 'Admin\ContactController')->except('destroy');
 Route::get('contacts/destroy/{id}', 'Admin\ContactController@destroy')->name('contacts.destroy');
+Route::resource('settings', 'Admin\SettingController');
+Route::resource('orders', 'Admin\OrderController')->except('destroy');
+Route::get('orders/destroy/{id}', 'Admin\OrderController@destroy')->name('orders.destroy');
+Route::resource('order_details', 'Admin\Order_detailController')->except('destroy');
+Route::get('order_details/destroy/{id}', 'Admin\Order_detailController@destroy')->name('order_details.destroy');
