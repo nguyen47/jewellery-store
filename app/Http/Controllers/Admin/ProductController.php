@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
+use App\Http\Controllers\Controller;
 use App\Product;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
@@ -26,7 +27,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-       return view('admin.products.create');
+        $categories = Category::all();
+        return view('admin.products.create', compact('categories'));
     }
 
     /**
@@ -78,7 +80,8 @@ class ProductController extends Controller
     public function edit($slug)
     {
         $product = Product::where('slug', $slug)->first();
-        return view('admin.products.edit', compact('product'));
+        $categories = Category::all();
+        return view('admin.products.edit', compact('product', 'categories'));
     }
 
     /**

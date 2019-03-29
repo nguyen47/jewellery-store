@@ -10,8 +10,8 @@ class Product extends Model
     use Sluggable;
 
     protected $fillable = [
-        'name', 'price', 'discount', 'stock', 'category_id', 'product_code', 'size', 'image','description', 'slug', 'status',
-      ];
+        'name', 'price', 'discount', 'stock', 'category_id', 'product_code', 'size', 'image', 'description', 'slug', 'status',
+    ];
 
     public function sluggable()
     {
@@ -20,5 +20,11 @@ class Product extends Model
                 'source' => 'name',
             ],
         ];
+    }
+
+    // One Product belongs to one category
+    public function categories()
+    {
+        return $this->belongsTo('App\Category', 'category_id');
     }
 }

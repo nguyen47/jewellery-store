@@ -27,6 +27,44 @@
         <li class="heading">
             <h3 class="uppercase">Danh mục</h3>
         </li>
+        <li class="nav-item ">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-navicon"></i>
+                <span class="title">Menu</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item">
+                    <a href="{{route('categories.index')}}" class="nav-link ">
+                        <span class="title">Danh sách</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('categories.create')}}" class="nav-link ">
+                        <span class="title">Thêm mới</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
 
+        <li class="nav-item ">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-navicon"></i>
+                <span class="title">Product</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item">
+                    <a href="{{route('products.index')}}" class="nav-link ">
+                        <span class="title">Danh sách</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('products.create')}}" class="nav-link ">
+                        <span class="title">Thêm mới</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
     <!-- END SIDEBAR MENU -->
 </div>

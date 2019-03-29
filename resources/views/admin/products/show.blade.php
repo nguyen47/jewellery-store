@@ -79,7 +79,7 @@
                                         <div class="form-group">
                                             <label class="col-md-3 control-label">Category_id</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$product->category_id}}  </p>
+                                                <p class="form-control-static">  {{$product->categories->name}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -91,7 +91,11 @@
                                         <div class="form-group">
                                             <label class="col-md-3 control-label">Status</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$product->status}}  </p>
+                                                @if ($product->status == 1) 
+                                                    <p class="form-control-static">  Hiện  </p>
+                                                @else
+                                                    <p class="form-control-static">  Ẩn  </p>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="form-group">

@@ -86,8 +86,11 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Category_id</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="category_id" placeholder="category_id" class="form-control" value="{{$product->category_id}}" />
-                                                {{-- <span style="color: red"> Error </span> --}}
+                                                <select class="form-control" name="category_id">
+                                                    @foreach ($categories as $category)
+                                                        <option value="{{$category->id}}" @if($category->id == $product->category_id) selected="" @endif >{{$category->name}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -100,8 +103,16 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Status</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="status" placeholder="Status" class="form-control" value="{{$product->status}}" />
-                                                {{-- <span style="color: red"> Error </span> --}}
+                                                <select class="form-control" name="status">
+                                                    @if ($product->status == 1)
+                                                        <option value="1" selected >Hiển Thị</option>
+                                                        <option value="0">Ẩn</option>
+                                                    @else
+                                                        <option value="1" >Hiển Thị</option>
+                                                        <option value="0" selected >Ẩn</option>
+                                                    @endif
+                                                    
+                                                </select>                                                {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">

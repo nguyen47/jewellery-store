@@ -22,4 +22,10 @@ class Category extends Model
         ];
     }
 
+    // One category has many product
+    public function products()
+    {
+        return $this->hasMany('App\Product');
+    }
+
 }

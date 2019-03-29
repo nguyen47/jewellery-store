@@ -37,6 +37,12 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'image' => 'required',
+        ]);
+
         $category = new Category;
 
         $imageName = time() . '.' . request()->image->getClientOriginalExtension();
@@ -89,6 +95,12 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $slug)
     {
+
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'required',
+        ]);
+
         $category = Category::where('slug', $slug)->first();
 
         if (isset($request->image)) {

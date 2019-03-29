@@ -54,6 +54,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th> Tên </th>
+                                    <th> Danh Mục </th>
                                     <th> Hình Ảnh </th>
                                     <th> Hành động </th>
                                 </tr>
@@ -63,6 +64,7 @@
                                     <tr class="odd gradeX">
                                         <td> {{$product->id}} </td>
                                         <td> {{$product->name}} </td>
+                                        <td> {{$product->categories->name}}</td>
                                         <td>
                                             <img src="{{asset('images') .  '/' .$product->image}}" width="80" height="50" /> 
                                         </td>
