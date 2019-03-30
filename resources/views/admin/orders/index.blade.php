@@ -9,8 +9,8 @@
     <div class="page-content">
         <!-- BEGIN PAGE HEADER-->
         <!-- BEGIN PAGE TITLE-->
-        <h1 class="page-title"> Order
-            <small>Danh sách Order</small>
+        <h1 class="page-title"> Đơn hàng
+            <small>Danh sách đơn hàng</small>
         </h1>
         <!-- END PAGE TITLE-->
         <!-- BEGIN PAGE BAR -->
@@ -21,7 +21,7 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>Order</span>
+                    <span>Đơn hàng</span>
                 </li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
                     <div class="portlet-title">
                         <div class="caption font-dark">
                             <i class="fa fa-navicon font-dark"></i>
-                            <span class="caption-subject bold uppercase"> Order</span>
+                            <span class="caption-subject bold uppercase"> Đơn hàng</span>
                         </div>
                     </div>
                     <div class="portlet-body">
@@ -42,7 +42,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="btn-group">
-                                        <a href="{{route('orders.create')}}" id="sample_editable_1_new" class="btn sbold green"> Thêm mới
+                                        <a href="{{route('orders.create')}}" id="sample_editable_1_new" class="btn 
+                                        sbold green"> Thêm mới
                                             <i class="fa fa-plus"></i>
                                         </a>
                                     </div>
@@ -52,26 +53,20 @@
                         <table class="table table-striped table-bordered table-hover" id="sample_1">
                             <thead>
                                 <tr>
-                                    <!-- <th>ID</th> -->
-                                    <th> Delivery_date </th>
-                                    <th> Status </th>
-                                    <th> Description </th>
-                                    <th> Shipping_address </th>
-                                    <th> Payment_type </th>
-                                    <th> User_id </th>
-                                    <th> Action </th>
+                                    <th> Khách hàng </th>
+                                    <th> Ngày giao hàng </th>
+                                    <th> Địa chỉ giao hàng </th>
+                                    <th> Hình thức thanh toán </th>
+                                    <th> Hành động </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($orders as $order)
                                     <tr class="odd gradeX">
-                                        <!-- <td> {{$order->id}} </td> -->
+                                        <td> {{$order->users->fullname}} </td>
                                         <td> {{$order->delivery_date}} </td>
-                                        <td> {{$order->status}} </td>
-                                        <td> {{$order->description}} </td>
                                         <td> {{$order->shipping_address}} </td>
                                         <td> {{$order->payment_type}} </td>
-                                        <td> {{$order->user_id}} </td>
                                         <td>
                                             <a href="{{route('orders.edit', $order->id)}}" class="btn green">
                                                 <i class="fa fa-pencil"></i>

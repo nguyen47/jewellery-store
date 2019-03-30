@@ -7,8 +7,8 @@
 	<div class="page-content">
 	    <!-- BEGIN PAGE HEADER-->
 	    <!-- BEGIN PAGE TITLE-->
-	    <h1 class="page-title"> Order
-	        <small>Chỉnh sửa order</small>
+	    <h1 class="page-title"> Đơn hàng
+	        <small>Chỉnh sửa đơn hàng</small>
 	    </h1>
 	    <!-- END PAGE TITLE-->
 	    <!-- BEGIN PAGE BAR -->
@@ -19,7 +19,7 @@
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-	                <span>Order</span>
+	                <span>Đơn hàng</span>
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
@@ -40,7 +40,7 @@
                         <div class="portlet box blue ">
                             <div class="portlet-title">
                                 <div class="caption">
-                                    <i class="fa fa-navicon"></i>Order </div>
+                                    <i class="fa fa-navicon"></i>Đơn hàng </div>
                             </div>
                             <div class="portlet-body form">
                                 <!-- BEGIN FORM-->
@@ -49,47 +49,54 @@
                                     @csrf
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Delivery_date</label>
+                                            <label class="control-label col-md-3">Khách hàng</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="delivery_date" placeholder="Delivery_date" class="form-control" value="{{$order->delivery_date}}" />
-                                                {{-- <span style="color: red"> Error </span> --}}
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Status</label>
-                                            <div class="col-md-9">
-                                                <input type="text" name="status" placeholder="Status" class="form-control" value="{{$order->status}}"/>
-                                                {{-- <span style="color: red"> Error </span> --}}
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Description</label>
-                                            <div class="col-md-9">
-                                                <input type="text" name="description" placeholder="Description" class="form-control" value="{{$order->description}}" />
-                                                {{-- <span style="color: red"> Error </span> --}}
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Shipping_address</label>
-                                            <div class="col-md-9">
-                                                <input type="text" name="shipping_address" placeholder="Shipping_address" class="form-control" value="{{$order->shipping_address}}"/>
-                                                {{-- <span style="color: red"> Error </span> --}}
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Payment_type</label>
-                                            <div class="col-md-9">
-                                                <input type="text" name="payment_type" placeholder="Payment_type" class="form-control" value="{{$order->payment_type}}"/>
-                                                {{-- <span style="color: red"> Error </span> --}}
-                                            </div>
-                                        </div>        
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">User_id</label>
-                                            <div class="col-md-9">
-                                                <input type="text" name="user_id" placeholder="User_id" class="form-control" value="{{$order->user_id}}"/>
+                                                <input type="text" name="user_id" placeholder="Khách hàng" class="form-control" value="{{$order->users->fullname}}"/>
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>                                  
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Ngày giao hàng</label>
+                                            <div class="col-md-9">
+                                                <input type="text" name="delivery_date" placeholder="Ngày giao hàng" class="form-control" value="{{$order->delivery_date}}" />
+                                                {{-- <span style="color: red"> Error </span> --}}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Trạng thái</label>
+                                            <div class="col-md-9">
+                                            <select class="form-control" name="status">
+                                                    @if ($order->status == 1)
+                                                        <option value="1" selected >Hiển Thị</option>
+                                                        <option value="0">Ẩn</option>
+                                                    @else
+                                                        <option value="1" >Hiển Thị</option>
+                                                        <option value="0" selected >Ẩn</option>
+                                                    @endif
+                                                </select>           
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Mô tả</label>
+                                            <div class="col-md-9">
+                                                <input type="text" name="description" placeholder="Mô tả" class="form-control" value="{{$order->description}}" />
+                                                {{-- <span style="color: red"> Error </span> --}}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Địa chỉ giao hàng</label>
+                                            <div class="col-md-9">
+                                                <input type="text" name="shipping_address" placeholder="Địa chỉ giao hàng" class="form-control" value="{{$order->shipping_address}}"/>
+                                                {{-- <span style="color: red"> Error </span> --}}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Hình thức thanh toán</label>
+                                            <div class="col-md-9">
+                                                <input type="text" name="payment_type" placeholder="Hình thức thanh toán" class="form-control" value="{{$order->payment_type}}"/>
+                                                {{-- <span style="color: red"> Error </span> --}}
+                                            </div>
+                                        </div>        
                                     </div>
                                     <div class="form-actions">
                                         <div class="row">

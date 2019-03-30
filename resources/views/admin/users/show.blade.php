@@ -7,8 +7,8 @@
 	<div class="page-content">
 	    <!-- BEGIN PAGE HEADER-->
 	    <!-- BEGIN PAGE TITLE-->
-	    <h1 class="page-title"> User
-	        <small>Thêm mới user</small>
+	    <h1 class="page-title"> Người dùng
+	        <small>Thêm mới người dùng</small>
 	    </h1>
 	    <!-- END PAGE TITLE-->
 	    <!-- BEGIN PAGE BAR -->
@@ -19,7 +19,7 @@
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-	                <span>User</span>
+	                <span>Người dùng</span>
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
@@ -40,52 +40,50 @@
                         <div class="portlet box blue ">
                             <div class="portlet-title">
                                 <div class="caption">
-                                    <i class="fa fa-navicon"></i>User</div>
+                                    <i class="fa fa-navicon"></i>Người dùng</div>
                             </div>
                             <div class="portlet-body form">
                                 <!-- BEGIN FORM-->
                                 <form action="#" method="POST" class="form-horizontal form-bordered">
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Fullname</label>
+                                            <label class="col-md-3 control-label">Tên đầy đủ</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$user->fullname}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Email</label>
+                                            <label class="col-md-3 control-label">Thư điện tử</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$user->email}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Password</label>
+                                            <label class="col-md-3 control-label">Mật khẩu</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$user->password}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Phone_number</label>
+                                            <label class="col-md-3 control-label">Số điện thoại</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$user->phone_number}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Address</label>
+                                            <label class="col-md-3 control-label">Địa chỉ</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$user->address}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Birthday</label>
+                                            <label class="col-md-3 control-label">Vai trò</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$user->birthday}}  </p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label">Role</label>
-                                            <div class="col-md-9">
-                                                <p class="form-control-static">  {{$user->role}}  </p>
+                                                @if ($user->role == 1) 
+                                                    <p class="form-control-static">  Admin  </p>
+                                                @else
+                                                    <p class="form-control-static">  User  </p>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

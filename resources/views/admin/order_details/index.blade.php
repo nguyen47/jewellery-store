@@ -9,8 +9,8 @@
     <div class="page-content">
         <!-- BEGIN PAGE HEADER-->
         <!-- BEGIN PAGE TITLE-->
-        <h1 class="page-title"> Order_detail
-            <small>Danh sách Order_detail</small>
+        <h1 class="page-title"> Chi tiết đơn hàng
+            <small>Danh sách chi tiết đơn hàng</small>
         </h1>
         <!-- END PAGE TITLE-->
         <!-- BEGIN PAGE BAR -->
@@ -21,7 +21,7 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>Order_detail</span>
+                    <span>Chi tiết đơn hàng</span>
                 </li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
                     <div class="portlet-title">
                         <div class="caption font-dark">
                             <i class="fa fa-navicon font-dark"></i>
-                            <span class="caption-subject bold uppercase"> Order_detail</span>
+                            <span class="caption-subject bold uppercase"> Chi tiết đơn hàng</span>
                         </div>
                     </div>
                     <div class="portlet-body">
@@ -52,25 +52,24 @@
                         <table class="table table-striped table-bordered table-hover" id="sample_1">
                             <thead>
                                 <tr>
-                                    <!-- <th>ID</th> -->
-                                    <th> Discount </th>
-                                    <th> Order_id </th>
-                                    <th> Product_id </th>
-                                    <th> Price </th>
-                                    <th> Quatity </th>
-                                    <th> Subtotal </th>
-                                    <th> Action </th>
+                                    <th> Khách hàng </th>
+                                    <th> Sản phẩm </th>
+                                    <th> Giá </th>
+                                    <th> Số lượng </th>
+                                    <th> Chiết khấu </th>
+                                    <th> Tổng tính </th>
+                                    <th> Hành động </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($order_details as $order_detail)
                                     <tr class="odd gradeX">
                                         <!-- <td> {{$order_detail->id}} </td> -->
-                                        <td> {{$order_detail->discount}} </td>
-                                        <td> {{$order_detail->order_id}} </td>
-                                        <td> {{$order_detail->product_id}} </td>
+                                        <td> {{$order_detail->orders->users->fullname}} </td>
+                                        <td> {{$order_detail->products->name}} </td>
                                         <td> {{$order_detail->price}} </td>
                                         <td> {{$order_detail->quatity}} </td>
+                                        <td> {{$order_detail->discount}} </td>
                                         <td> {{$order_detail->subtotal}} </td>
                                         <td>
                                             <a href="{{route('order_details.edit', $order_detail->id)}}" class="btn green">

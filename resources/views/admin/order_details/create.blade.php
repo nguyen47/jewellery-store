@@ -7,8 +7,8 @@
 	<div class="page-content">
 	    <!-- BEGIN PAGE HEADER-->
 	    <!-- BEGIN PAGE TITLE-->
-	    <h1 class="page-title"> Order_detail
-	        <small>Thêm mới order_detail</small>
+	    <h1 class="page-title"> Chi tiết đơn hàng
+	        <small>Thêm mới chi tiết đơn hàng</small>
 	    </h1>
 	    <!-- END PAGE TITLE-->
 	    <!-- BEGIN PAGE BAR -->
@@ -19,7 +19,7 @@
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-	                <span>Order_detail</span>
+	                <span>Chi tiết đơn hàng</span>
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
@@ -36,7 +36,7 @@
                         <div class="portlet box blue ">
                             <div class="portlet-title">
                                 <div class="caption">
-                                    <i class="fa fa-navicon"></i>Order_detail </div>
+                                    <i class="fa fa-navicon"></i>Chi tiết đơn hàng </div>
                             </div>
                             <div class="portlet-body form">
                                 <!-- BEGIN FORM-->
@@ -44,47 +44,47 @@
                                     @csrf
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Discount</label>
+                                            <label class="control-label col-md-3">Khách hàng</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="discount" placeholder="Discount" class="form-control" />
+                                                <input type="text" name="order_id" placeholder="Khách hàng" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Order_id</label>
+                                            <label class="control-label col-md-3">Sản phẩm</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="order_id" placeholder="Order_id" class="form-control" />
-                                                {{-- <span style="color: red"> Error </span> --}}
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Product_id</label>
-                                            <div class="col-md-9">
-                                                <input type="text" name="product_id" placeholder="Product_id" class="form-control" />
+                                                <input type="text" name="product_id" placeholder="Sản phẩm" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>                                  
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Price</label>
+                                            <label class="control-label col-md-3">Giá</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="price" placeholder="Price" class="form-control" />
+                                                <input type="text" name="price" placeholder="Giá" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Quatity</label>
+                                            <label class="control-label col-md-3">Số lượng</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="quatity" placeholder="Quatity" class="form-control" />
+                                                <input type="text" name="quatity" placeholder="Số lượng" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>  
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Subtotal</label>
+                                            <label class="control-label col-md-3">Chiết khấu</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="subtotal" placeholder="Subtotal" class="form-control" />
+                                                <input type="text" name="discount" placeholder="Chiết khấu" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
-                                        </div>                                    
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Tổng tính</label>
+                                            <div class="col-md-9">
+                                                <input type="text" name="subtotal" placeholder="Tổng tính" class="form-control" />
+                                                {{-- <span style="color: red"> Error </span> --}}
+                                            </div>
+                                        </div>                                
                                     </div>
                                     <div class="form-actions">
                                         <div class="row">

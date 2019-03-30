@@ -19,11 +19,11 @@
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-	                <span>Danh Mục</span>
+	                <span>Danh mục</span>
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-                    <span>Chi Tiết</span>
+                    <span>Chi tiết</span>
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
@@ -47,19 +47,19 @@
                                 <form action="#" method="POST" class="form-horizontal form-bordered">
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Tên Danh Mục</label>
+                                            <label class="col-md-3 control-label">Tên danh mục</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$category->name}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Mô Tả</label>
+                                            <label class="col-md-3 control-label">Mô tả</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static"> {{$category->description}} </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Hình Ảnh</label>
+                                            <label class="col-md-3 control-label">Hình ảnh</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static"> <img height="150" width="240" src="{{asset('images') .'/' . $category->image}}" /> </p>
                                             </div>

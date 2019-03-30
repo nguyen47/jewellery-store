@@ -53,43 +53,43 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Price</label>
+                                            <label class="col-md-3 control-label">Giá</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$product->price}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Discount</label>
+                                            <label class="col-md-3 control-label">Chiết khấu</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$product->discount}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Size</label>
+                                            <label class="col-md-3 control-label">Kích cỡ</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$product->size}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Stock</label>
+                                            <label class="col-md-3 control-label">Số lượng</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$product->stock}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Category_id</label>
+                                            <label class="col-md-3 control-label">Danh mục</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$product->categories->name}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Product_code</label>
+                                            <label class="col-md-3 control-label">Mã sản phẩm</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$product->product_code}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Status</label>
+                                            <label class="col-md-3 control-label">Trạng thái</label>
                                             <div class="col-md-9">
                                                 @if ($product->status == 1) 
                                                     <p class="form-control-static">  Hiện  </p>
@@ -99,7 +99,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Description</label>
+                                            <label class="col-md-3 control-label">Mô tả</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static"> {{$product->description}} </p>
                                             </div>

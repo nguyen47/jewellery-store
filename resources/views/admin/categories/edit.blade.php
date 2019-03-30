@@ -42,7 +42,7 @@
                     @endforeach
                 </ul>
             </div>
-        @endif
+            @endif
             <div class="col-md-12">
                 <div class="tabbable-line boxless tabbable-reversed">
                     <div class="tab-pane">

@@ -54,7 +54,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th> Tên </th>
-                                    <th> Hình Ảnh </th>
+                                    <th> Hình ảnh </th>
                                     <th> Hành động </th>
                                 </tr>
                             </thead>

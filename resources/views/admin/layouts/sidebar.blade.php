@@ -50,7 +50,7 @@
         <li class="nav-item ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="fa fa-navicon"></i>
-                <span class="title">Product</span>
+                <span class="title">Sản phẩm</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
@@ -61,6 +61,66 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{route('products.create')}}" class="nav-link ">
+                        <span class="title">Thêm mới</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item ">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-navicon"></i>
+                <span class="title">Người dùng</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item">
+                    <a href="{{route('users.index')}}" class="nav-link ">
+                        <span class="title">Danh sách</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('users.create')}}" class="nav-link ">
+                        <span class="title">Thêm mới</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item ">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-navicon"></i>
+                <span class="title">Đơn hàng</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item">
+                    <a href="{{route('orders.index')}}" class="nav-link ">
+                        <span class="title">Danh sách</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('orders.create')}}" class="nav-link ">
+                        <span class="title">Thêm mới</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item ">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-navicon"></i>
+                <span class="title">Chi tiết đơn hàng</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item">
+                    <a href="{{route('order_details.index')}}" class="nav-link ">
+                        <span class="title">Danh sách</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('order_details.create')}}" class="nav-link ">
                         <span class="title">Thêm mới</span>
                     </a>
                 </li>

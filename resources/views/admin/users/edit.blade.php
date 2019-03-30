@@ -7,8 +7,8 @@
 	<div class="page-content">
 	    <!-- BEGIN PAGE HEADER-->
 	    <!-- BEGIN PAGE TITLE-->
-	    <h1 class="page-title"> User
-	        <small>Chỉnh sửa user</small>
+	    <h1 class="page-title"> Người dùng
+	        <small>Chỉnh sửa người dùng</small>
 	    </h1>
 	    <!-- END PAGE TITLE-->
 	    <!-- BEGIN PAGE BAR -->
@@ -19,7 +19,7 @@
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-	                <span>User</span>
+	                <span>Người dùng</span>
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
@@ -34,13 +34,22 @@
 	    <!-- END PAGE BAR -->
 	    <!-- END PAGE HEADER-->
         <div class="row">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
             <div class="col-md-12">
                 <div class="tabbable-line boxless tabbable-reversed">
                     <div class="tab-pane">
                         <div class="portlet box blue ">
                             <div class="portlet-title">
                                 <div class="caption">
-                                    <i class="fa fa-navicon"></i>User </div>
+                                    <i class="fa fa-navicon"></i>Người dùng </div>
                             </div>
                             <div class="portlet-body form">
                                 <!-- BEGIN FORM-->
@@ -49,52 +58,52 @@
                                     @csrf
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Fullname</label>
+                                            <label class="control-label col-md-3">Tên đầy đủ</label>
                                             <div class="col-md-9">
                                                 <input type="text" name="fullname" placeholder="Fullname" class="form-control" value="{{$user->fullname}}" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Email</label>
+                                            <label class="control-label col-md-3">Thư điện tử</label>
                                             <div class="col-md-9">
                                                 <input type="text" name="email" placeholder="Email" class="form-control" value="{{$user->email}}" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Password</label>
+                                            <label class="control-label col-md-3">Mật khẩu</label>
                                             <div class="col-md-9">
                                                 <input type="text" name="password" placeholder="Password" class="form-control" value="{{$user->password}}"/>
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Phone_number</label>
+                                            <label class="control-label col-md-3">Số điện thoại</label>
                                             <div class="col-md-9">
                                                 <input type="text" name="phone_number" placeholder="Phone_number" class="form-control" value="{{$user->phone_number}}"/>
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Address</label>
+                                            <label class="control-label col-md-3">Địa chỉ</label>
                                             <div class="col-md-9">
                                                 <input type="text" name="address" placeholder="Address" class="form-control" value="{{$user->address}}"/>
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Birthday</label>
+                                         <div class="form-group">
+                                            <label class="control-label col-md-3">Vai trò</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="birthday" placeholder="Birthday" class="form-control" value="{{$user->birthday}}"/>
-                                                {{-- <span style="color: red"> Error </span> --}}
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Role</label>
-                                            <div class="col-md-9">
-                                                <input type="text" name="role" placeholder="Role" class="form-control" value="{{$user->role}}"/>
-                                                {{-- <span style="color: red"> Error </span> --}}
+                                                <select class="form-control" name="status">
+                                                    @if ($user->role == 1)
+                                                        <option value="1" selected >Admin</option>
+                                                        <option value="2">User</option>
+                                                    @else
+                                                        <option value="1" >Admin</option>
+                                                        <option value="2" selected >User</option>
+                                                    @endif
+                                                </select>               
                                             </div>
                                         </div>
                                     </div>

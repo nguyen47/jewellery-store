@@ -39,6 +39,17 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'price' => 'required|numeric:10',
+            'discount' => 'required|numeric',
+            'stock' => 'required|numeric',
+            'product_code' => 'required|max:50',
+            'size' => 'required|numeric',
+            'description' => 'required|max:255',
+            'image' => 'required|image',
+        ]);
+
         $product = new Product;
         $imageName = time() . '.' . request()->image->getClientOriginalExtension();
         request()->image->move(public_path('images'), $imageName);
@@ -93,6 +104,16 @@ class ProductController extends Controller
      */
     public function update(Request $request, $slug)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'price' => 'required|numeric:10',
+            'discount' => 'required|numeric',
+            'stock' => 'required|numeric',
+            'product_code' => 'required|max:50',
+            'size' => 'required|numeric',
+            'description' => 'required|max:255',
+        ]);
+        
         $product = Product::where('slug', $slug)->first();
 
         if (isset($request->image)) {

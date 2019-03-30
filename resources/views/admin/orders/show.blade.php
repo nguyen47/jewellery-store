@@ -7,8 +7,8 @@
 	<div class="page-content">
 	    <!-- BEGIN PAGE HEADER-->
 	    <!-- BEGIN PAGE TITLE-->
-	    <h1 class="page-title"> Order
-	        <small>Thêm mới order</small>
+	    <h1 class="page-title"> Đơn hàng
+	        <small>Thêm mới đơn hàng</small>
 	    </h1>
 	    <!-- END PAGE TITLE-->
 	    <!-- BEGIN PAGE BAR -->
@@ -19,7 +19,7 @@
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-	                <span>Order</span>
+	                <span>Đơn hàng</span>
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
@@ -27,7 +27,7 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>{{$order->delivery_date}}</span>
+                    <span>{{$order->users->fullname}}</span>
 	            </li>
 	        </ul>
 	    </div>
@@ -40,48 +40,52 @@
                         <div class="portlet box blue ">
                             <div class="portlet-title">
                                 <div class="caption">
-                                    <i class="fa fa-navicon"></i>Order</div>
+                                    <i class="fa fa-navicon"></i>Đơn hàng</div>
                             </div>
                             <div class="portlet-body form">
                                 <!-- BEGIN FORM-->
                                 <form action="#" method="POST" class="form-horizontal form-bordered">
                                     <div class="form-body">
+                                         <div class="form-group">
+                                            <label class="col-md-3 control-label">Khách hàng</label>
+                                            <div class="col-md-9">
+                                                <p class="form-control-static">  {{$order->users->fullname}}  </p>
+                                            </div>
+                                        </div>  
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Delivery_date</label>
+                                            <label class="col-md-3 control-label">Ngày giao hàng</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$order->delivery_date}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Status</label>
+                                            <label class="col-md-3 control-label">Trạng thái</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order->status}}  </p>
+                                                 @if ($order->status == 1) 
+                                                    <p class="form-control-static">  Hiện  </p>
+                                                @else
+                                                    <p class="form-control-static">  Ẩn  </p>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Description</label>
+                                            <label class="col-md-3 control-label">Mô tả</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$order->description}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Shipping_address</label>
+                                            <label class="col-md-3 control-label">Địa chỉ giao hàng</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$order->shipping_address}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Payment_type</label>
+                                            <label class="col-md-3 control-label">Hình thức thanh toán</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$order->payment_type}}  </p>
                                             </div>
-                                        </div>     
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label">User_id</label>
-                                            <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order->user_id}}  </p>
-                                            </div>
-                                        </div>                               
+                                        </div>                                  
                                     </div>
                                     <div class="form-actions">
                                         <div class="row">

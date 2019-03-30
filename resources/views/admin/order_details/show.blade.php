@@ -7,8 +7,8 @@
 	<div class="page-content">
 	    <!-- BEGIN PAGE HEADER-->
 	    <!-- BEGIN PAGE TITLE-->
-	    <h1 class="page-title"> Order_detail
-	        <small>Thêm mới order_detail</small>
+	    <h1 class="page-title"> Chi tiết đơn hàng
+	        <small>Thêm mới chi tiết đơn hàng</small>
 	    </h1>
 	    <!-- END PAGE TITLE-->
 	    <!-- BEGIN PAGE BAR -->
@@ -19,7 +19,7 @@
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-	                <span>Order_detail</span>
+	                <span>Chi tiết đơn hàng</span>
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
@@ -27,7 +27,7 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span> {{$order_detail->order_id}} </span>
+                    <span> {{$order_detail->orders->users->fullname}} </span>
 	            </li>
 	        </ul>
 	    </div>
@@ -40,44 +40,44 @@
                         <div class="portlet box blue ">
                             <div class="portlet-title">
                                 <div class="caption">
-                                    <i class="fa fa-navicon"></i>Order_detail</div>
+                                    <i class="fa fa-navicon"></i>Chi tiết đơn hàng</div>
                             </div>
                             <div class="portlet-body form">
                                 <!-- BEGIN FORM-->
                                 <form action="#" method="POST" class="form-horizontal form-bordered">
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Discount</label>
+                                            <label class="col-md-3 control-label">Khách hàng</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order_detail->discount}}  </p>
+                                                <p class="form-control-static">  {{$order_detail->orders->users->fullname}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Order_id</label>
+                                            <label class="col-md-3 control-label">Sản phẩm</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order_detail->order_id}}  </p>
+                                                <p class="form-control-static">  {{$order_detail->products->name}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Product_id</label>
-                                            <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order_detail->product_id}}  </p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label">Price</label>
+                                            <label class="col-md-3 control-label">Giá</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$order_detail->price}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Quatity</label>
+                                            <label class="col-md-3 control-label">Số lượng</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$order_detail->quatity}}  </p>
                                             </div>
-                                        </div>     
+                                        </div>    
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Subtotal</label>
+                                            <label class="col-md-3 control-label">Chiết khấu</label>
+                                            <div class="col-md-9">
+                                                <p class="form-control-static">  {{$order_detail->discount}}  </p>
+                                            </div>
+                                        </div> 
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Tổng tính</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$order_detail->subtotal}}  </p>
                                             </div>

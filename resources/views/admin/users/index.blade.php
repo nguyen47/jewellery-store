@@ -9,8 +9,8 @@
     <div class="page-content">
         <!-- BEGIN PAGE HEADER-->
         <!-- BEGIN PAGE TITLE-->
-        <h1 class="page-title"> User
-            <small>Danh sách user</small>
+        <h1 class="page-title"> Người dùng
+            <small>Danh sách người dùng</small>
         </h1>
         <!-- END PAGE TITLE-->
         <!-- BEGIN PAGE BAR -->
@@ -21,7 +21,7 @@
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>User</span>
+                    <span>Người dùng</span>
                 </li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
                     <div class="portlet-title">
                         <div class="caption font-dark">
                             <i class="fa fa-navicon font-dark"></i>
-                            <span class="caption-subject bold uppercase"> User</span>
+                            <span class="caption-subject bold uppercase"> Người dùng</span>
                         </div>
                     </div>
                     <div class="portlet-body">
@@ -53,14 +53,14 @@
                             <thead>
                                 <tr>
                                     <!-- <th>ID</th> -->
-                                    <th> Fullname </th>
-                                    <th> Email </th>
+                                    <th> Tên đầy đủ </th>
+                                    <th> Thue điện tử </th>
                                     <!-- <th> Password </th> -->
-                                    <th> Phone_number </th>
-                                    <th> Address </th>
+                                    <th> Số điện tử </th>
+                                    <th> Địa chỉ </th>
                                     <!-- <th> Birthday </th> -->
-                                    <th> Role </th>
-                                    <th> Action </th>
+                                    <th> Vai trò </th>
+                                    <th> Hành động </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -72,8 +72,14 @@
                                         <!-- <td> {{$user->password}} </td>  -->
                                         <td> {{$user->phone_number}} </td>
                                         <td> {{$user->address}} </td>
-                                        <!-- <td> {{$user->birthday}} </td> -->
-                                        <td> {{$user->role}} </td>
+                                        <!-- <td> {{$user->role}} </td> -->
+                                        <td> 
+                                            @if ($user->role == 1) 
+                                                <p class="form-control-static">  Admin  </p>
+                                            @else
+                                                <p class="form-control-static">  User  </p>
+                                            @endif
+                                        </td>
                                         <td>
                                             <a href="{{route('users.edit', $user->id)}}" class="btn green">
                                                 <i class="fa fa-pencil"></i>

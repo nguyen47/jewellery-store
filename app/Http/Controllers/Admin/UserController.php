@@ -37,6 +37,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'fullname' => 'required|max:255',
+            'email' => 'required|email',
+            'password' => 'required',
+            'phone_number' => 'required|numeric:10',
+            'address' => 'required|max:255',
+        ]);
+
         $user = new User;
 
         $user->fullname = $request->fullname;
@@ -44,7 +52,6 @@ class UserController extends Controller
         $user->password = $request->password;
         $user->phone_number = $request->phone_number;
         $user->address = $request->address;
-        $user->birthday = $request->birthday;
         $user->role = $request->role;
 
         $user->save();
@@ -85,6 +92,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validatedData = $request->validate([
+            'fullname' => 'required|max:255',
+            'email' => 'required|email',
+            'password' => 'required',
+            'phone_number' => 'required|numeric:10',
+            'address' => 'required|max:255',
+        ]);
+
         $user = User::where('id', $id)->first();
 
         $user->fullname = $request->fullname;

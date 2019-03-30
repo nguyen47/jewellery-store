@@ -34,6 +34,15 @@
 	    <!-- END PAGE BAR -->
 	    <!-- END PAGE HEADER-->
         <div class="row">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
             <div class="col-md-12">
                 <div class="tabbable-line boxless tabbable-reversed">
                     <div class="tab-pane">
@@ -51,40 +60,40 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Tên sản phẩm</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="name" placeholder="Tên danh mục" class="form-control" value="{{$product->name}}" />
+                                                <input type="text" name="name" placeholder="Tên sản phẩm" class="form-control" value="{{$product->name}}" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Price</label>
+                                            <label class="control-label col-md-3">Giá</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="price" placeholder="price" class="form-control" value="{{$product->price}}" />
+                                                <input type="text" name="price" placeholder="Giá" class="form-control" value="{{$product->price}}" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Discount</label>
+                                            <label class="control-label col-md-3">Chiết khấu</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="discount" placeholder="Discount" class="form-control" value="{{$product->discount}}" />
+                                                <input type="text" name="discount" placeholder="Chiết khấu" class="form-control" value="{{$product->discount}}" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Size</label>
+                                            <label class="control-label col-md-3">Kích cỡ</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="size" placeholder="Size" class="form-control" value="{{$product->size}}" />
+                                                <input type="text" name="size" placeholder="Kích cỡ" class="form-control" value="{{$product->size}}" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Stock</label>
+                                            <label class="control-label col-md-3">Số lượng</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="stock" placeholder="stock" class="form-control" value="{{$product->stock}}" />
+                                                <input type="text" name="stock" placeholder="Số lượng" class="form-control" value="{{$product->stock}}" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Category_id</label>
+                                            <label class="control-label col-md-3">Danh mục</label>
                                             <div class="col-md-9">
                                                 <select class="form-control" name="category_id">
                                                     @foreach ($categories as $category)
@@ -94,14 +103,14 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Product_code</label>
+                                            <label class="control-label col-md-3">Mã sản phẩm</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="product_code" placeholder="product_code" class="form-control" value="{{$product->product_code}}" />
+                                                <input type="text" name="product_code" placeholder="Mã sản phẩm" class="form-control" value="{{$product->product_code}}" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Status</label>
+                                            <label class="control-label col-md-3">Trạng thái</label>
                                             <div class="col-md-9">
                                                 <select class="form-control" name="status">
                                                     @if ($product->status == 1)
@@ -111,8 +120,7 @@
                                                         <option value="1" >Hiển Thị</option>
                                                         <option value="0" selected >Ẩn</option>
                                                     @endif
-                                                    
-                                                </select>                                                {{-- <span style="color: red"> Error </span> --}}
+                                                </select>                       
                                             </div>
                                         </div>
                                         <div class="form-group">

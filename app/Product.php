@@ -27,4 +27,19 @@ class Product extends Model
     {
         return $this->belongsTo('App\Category', 'category_id');
     }
+
+    public function order_details()
+    {
+        return $this->hasMany('App\Order_detail');
+    }
+
+    public function banners()
+    {
+        return $this->hasMany('App\Banner');
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany('App\Review');
+    }
 }
