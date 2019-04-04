@@ -44,17 +44,23 @@
                                     @csrf
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Khách hàng</label>
+                                            <label class="control-label col-md-3">Đơn hàng</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="order_id" placeholder="Khách hàng" class="form-control" />
-                                                {{-- <span style="color: red"> Error </span> --}}
+                                                <select class="form-control" name="order_id">
+                                                    @foreach ($orders as $order)
+                                                        <option value="{{$order->id}}">{{$order->order_id}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Sản phẩm</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="product_id" placeholder="Sản phẩm" class="form-control" />
-                                                {{-- <span style="color: red"> Error </span> --}}
+                                                <select class="form-control" name="product_id">
+                                                    @foreach ($products as $product)
+                                                        <option value="{{$order_detail->products->id}}">{{$order_detail->products->name}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>                                  
                                         <div class="form-group">

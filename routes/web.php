@@ -12,10 +12,12 @@
  */
 
 Route::get('/', 'HomepageController@index');
+Route::get('/categories', 'CategoryController@index');
 
 Route::get('/test', function () {
     return view('admin.layouts.masterLayout');
 });
+
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::resource('categories', 'CategoryController')->except('destroy');

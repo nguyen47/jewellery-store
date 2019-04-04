@@ -52,7 +52,7 @@
                         <table class="table table-striped table-bordered table-hover text-center" id="sample_1">
                             <thead>
                                 <tr>
-                                    <th class="text-center"> Khách hàng </th>
+                                    <th class="text-center"> Đơn hàng </th>
                                     <th class="text-center"> Sản phẩm </th>
                                     <th class="text-center"> Giá </th>
                                     <th class="text-center"> Số lượng </th>
@@ -64,7 +64,7 @@
                             <tbody>
                                 @foreach ($order_details as $order_detail)
                                     <tr class="odd gradeX">
-                                        <td> {{$order_detail->orders->users->fullname}} </td>
+                                        <td> {{$order_detail->order_id}} </td>
                                         <td> {{$order_detail->products->name}} </td>
                                         <td> {{$order_detail->price}} </td>
                                         <td> {{$order_detail->quatity}} </td>
