@@ -50,14 +50,14 @@
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-striped table-bordered table-hover" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover text-center" id="sample_1">
                             <thead>
                                 <tr>
-                                    <th> Khách hàng </th>
-                                    <th> Ngày giao hàng </th>
-                                    <th> Địa chỉ giao hàng </th>
-                                    <th> Hình thức thanh toán </th>
-                                    <th> Hành động </th>
+                                    <th class="text-center"> Khách hàng </th>
+                                    <th class="text-center"> Ngày giao hàng </th>
+                                    <th class="text-center"> Địa chỉ giao hàng </th>
+                                    <th class="text-center"> Hình thức thanh toán </th>
+                                    <th class="text-center"> Hành động </th>
                                 </tr>
                             </thead>
                             <tbody>

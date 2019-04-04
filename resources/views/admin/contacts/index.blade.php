@@ -49,26 +49,22 @@
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-striped table-bordered table-hover" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover text-center" id="sample_1">
                             <thead>
                                 <tr>
-                                    <!-- <th>ID</th> -->
-                                    <th> Name </th>
-                                    <th> Phone_number </th>
-                                    <th> Email </th>
-                                    <!-- <th> Address </th> -->
-                                    <th> Content </th>
-                                    <th> Action </th>
+                                    <th class="text-center"> Họ tên </th>
+                                    <th class="text-center"> Số điện thoại </th>
+                                    <th class="text-center"> Thư điện tử </th>
+                                    <th class="text-center"> Nội dung </th>
+                                    <th class="text-center"> Hành động </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($contacts as $contact)
                                     <tr class="odd gradeX">
-                                        <!-- <td> {{$contact->id}} </td> -->
                                         <td> {{$contact->name}} </td>
                                         <td> {{$contact->phone_number}} </td>
                                         <td> {{$contact->email}} </td>
-                                        <!-- <td> {{$contact->address}} </td> -->
                                         <td> {{$contact->content}} </td>
                                         <td>
                                             <a href="{{route('contacts.edit', $contact->id)}}" class="btn green">

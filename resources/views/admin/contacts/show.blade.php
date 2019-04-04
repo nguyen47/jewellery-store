@@ -47,31 +47,31 @@
                                 <form action="#" method="POST" class="form-horizontal form-bordered">
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">name</label>
+                                            <label class="col-md-3 control-label">Họ tên</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$contact->name}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Phone_number</label>
+                                            <label class="col-md-3 control-label">Số điện thoại</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$contact->phone_number}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Email</label>
+                                            <label class="col-md-3 control-label">Thư điện tử</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$contact->email}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Address</label>
+                                            <label class="col-md-3 control-label">Địa chỉ</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$contact->address}}  </p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Content</label>
+                                            <label class="col-md-3 control-label">Nội dung</label>
                                             <div class="col-md-9">
                                                 <p class="form-control-static">  {{$contact->content}}  </p>
                                             </div>
