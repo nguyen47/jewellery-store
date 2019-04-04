@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
@@ -49,7 +49,7 @@ class UserController extends Controller
 
         $user->fullname = $request->fullname;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = bcrypt($request->password);
         $user->phone_number = $request->phone_number;
         $user->address = $request->address;
         $user->role = $request->role;
@@ -104,7 +104,7 @@ class UserController extends Controller
 
         $user->fullname = $request->fullname;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = bcrypt($request->password);
         $user->phone_number = $request->phone_number;
         $user->address = $request->address;
         $user->birthday = $request->birthday;
@@ -114,7 +114,7 @@ class UserController extends Controller
 
         return redirect()->route('users.index');
     }
-    
+
     /**
      * Remove the specified resource from storage.
      *

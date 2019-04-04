@@ -44,7 +44,7 @@
                             </div>
                             <div class="portlet-body form">
                                 <!-- BEGIN FORM-->
-                                <form action="{{route('settings.edit', $setting->id)}}" method="POST" class="form-horizontal form-bordered" enctype="multipart/form-data">
+                                <form action="{{route('settings.edit')}}" method="POST" class="form-horizontal form-bordered" enctype="multipart/form-data">
                                 <input name="_method" type="hidden" value="PUT">
                                     @csrf
                                     <div class="form-body">

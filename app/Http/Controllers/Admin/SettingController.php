@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Setting;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class SettingController extends Controller
 {
@@ -16,6 +16,7 @@ class SettingController extends Controller
     public function index()
     {
         $settings = Setting::all();
+        dd($settings);
         return view('admin.settings.edit', compact('settings'));
     }
 
@@ -26,7 +27,7 @@ class SettingController extends Controller
      */
     public function create()
     {
-        return view('admin.settings.edit');
+        return view('admin.settings.create');
     }
 
     /**
@@ -46,7 +47,7 @@ class SettingController extends Controller
         $setting->email = $request->email;
         $setting->facebook = $request->facebook;
         $setting->instagram = $request->instagram;
-      
+
         $setting->save();
 
         return redirect()->route('settings.edit');
@@ -60,7 +61,7 @@ class SettingController extends Controller
      */
     public function show($id)
     {
-        $setting = Setting::where('id',$id)->first();
+        $setting = Setting::where('id', $id)->first();
         return view('admin.settings.edit', compact('setting'));
     }
 
@@ -72,7 +73,7 @@ class SettingController extends Controller
      */
     public function edit($id)
     {
-        $setting = Setting::where('id',$id)->first();
+        $setting = Setting::first();
         return view('admin.settings.edit', compact('setting'));
     }
 
@@ -83,9 +84,9 @@ class SettingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $setting = Setting::where('id',$id)->first();
+        $setting = Setting::first();
 
         $setting->name = $request->name;
         $setting->operation_hours = $request->operation_hours;
@@ -94,7 +95,7 @@ class SettingController extends Controller
         $setting->email = $request->email;
         $setting->facebook = $request->facebook;
         $setting->instagram = $request->instagram;
-      
+
         $setting->save();
 
         return redirect()->route('settings.edit');
