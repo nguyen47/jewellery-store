@@ -49,13 +49,13 @@
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-striped table-bordered table-hover" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover text-center" id="sample_1">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th> Product_id </th>
-                                    <th> Hình Ảnh </th>
-                                    <th> Hành động </th>
+                                    <th class=text-center>ID</th>
+                                    <th class=text-center> Product_id </th>
+                                    <th class=text-center> Hình Ảnh </th>
+                                    <th class=text-center> Hành động </th>
                                 </tr>
                             </thead>
                             <tbody>

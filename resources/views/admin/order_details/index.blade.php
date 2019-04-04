@@ -49,22 +49,21 @@
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-striped table-bordered table-hover" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover text-center" id="sample_1">
                             <thead>
                                 <tr>
-                                    <th> Khách hàng </th>
-                                    <th> Sản phẩm </th>
-                                    <th> Giá </th>
-                                    <th> Số lượng </th>
-                                    <th> Chiết khấu </th>
-                                    <th> Tổng tính </th>
-                                    <th> Hành động </th>
+                                    <th class="text-center"> Khách hàng </th>
+                                    <th class="text-center"> Sản phẩm </th>
+                                    <th class="text-center"> Giá </th>
+                                    <th class="text-center"> Số lượng </th>
+                                    <th class="text-center"> Chiết khấu </th>
+                                    <th class="text-center"> Tổng tính </th>
+                                    <th class="text-center"> Hành động </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($order_details as $order_detail)
                                     <tr class="odd gradeX">
-                                        <!-- <td> {{$order_detail->id}} </td> -->
                                         <td> {{$order_detail->orders->users->fullname}} </td>
                                         <td> {{$order_detail->products->name}} </td>
                                         <td> {{$order_detail->price}} </td>

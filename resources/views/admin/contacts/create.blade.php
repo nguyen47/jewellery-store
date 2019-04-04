@@ -44,37 +44,37 @@
                                     @csrf
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Name</label>
+                                            <label class="control-label col-md-3">Họ tên</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="name" placeholder="Name" class="form-control" />
+                                                <input type="text" name="name" placeholder="Họ tên" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Phone_number</label>
+                                            <label class="control-label col-md-3">Số điện thoại</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="phone_number" placeholder="Phone_number" class="form-control" />
+                                                <input type="text" name="phone_number" placeholder="Số điện thoại" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Email</label>
+                                            <label class="control-label col-md-3">Thư điện tử</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="email" placeholder="Email" class="form-control" />
+                                                <input type="text" name="email" placeholder="Thư điện tử" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>                                  
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Address</label>
+                                            <label class="control-label col-md-3">Địa chỉ</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="address" placeholder="Address" class="form-control" />
+                                                <input type="text" name="address" placeholder="Địa chỉ" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Content</label>
+                                            <label class="control-label col-md-3">Nội dung</label>
                                             <div class="col-md-9">
-                                                <input type="text" name="content" placeholder="Content" class="form-control" />
+                                                <input type="text" name="content" placeholder="Nội dung" class="form-control" />
                                                 {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>                              

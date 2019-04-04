@@ -49,30 +49,24 @@
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-striped table-bordered table-hover" id="sample_1">
+                        <table class="table table-striped table-bordered table-hover text-center" id="sample_1">
                             <thead>
                                 <tr>
-                                    <!-- <th>ID</th> -->
-                                    <th> Tên đầy đủ </th>
-                                    <th> Thue điện tử </th>
-                                    <!-- <th> Password </th> -->
-                                    <th> Số điện tử </th>
-                                    <th> Địa chỉ </th>
-                                    <!-- <th> Birthday </th> -->
-                                    <th> Vai trò </th>
-                                    <th> Hành động </th>
+                                    <th class="text-center"> Tên đầy đủ </th>
+                                    <th class="text-center"> Thư điện tử </th>
+                                    <th class="text-center"> Số điện thoại </th>
+                                    <th class="text-center"> Địa chỉ </th>
+                                    <th class="text-center"> Vai trò </th>
+                                    <th class="text-center"> Hành động </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($users as $user)
                                     <tr class="odd gradeX">
-                                        <!-- <td> {{$user->id}} </td> -->
                                         <td> {{$user->fullname}} </td>
                                         <td> {{$user->email}} </td>
-                                        <!-- <td> {{$user->password}} </td>  -->
                                         <td> {{$user->phone_number}} </td>
                                         <td> {{$user->address}} </td>
-                                        <!-- <td> {{$user->role}} </td> -->
                                         <td> 
                                             @if ($user->role == 1) 
                                                 <p class="form-control-static">  Admin  </p>
