@@ -83,7 +83,7 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-12 col-xs-12">
 							<div class="logo logo1 pull-left">
-								<a href="index-2.html">
+								<a href="{{asset('assets/client/index-2.html')}}">
 									<span class="logo-icon title24 round white bg-dark"><i class="fa fa-diamond"></i></span>
 									<strong class="play-font font-italic title30 dark text-uppercase">BW-</strong>
 									<span class="play-font font-italic font-normal title30 dark">Store</span>
@@ -226,9 +226,9 @@
 									<li class="menu-item-has-children">
 										<a href="#">Pages</a>
 										<ul class="sub-menu">
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="contact.html">Contact Us</a></li>
-											<li><a href="404.html">Error 404</a></li>
+											<li><a href="{{asset('assets/client/about.html')}}">About Us</a></li>
+											<li><a href="{{asset('assets/client/contact.html')}}">Contact Us</a></li>
+											<li><a href="{{asset('assets/client/404.html')}}">Error 404</a></li>
 										</ul>
 									</li>
 									<li class="menu-item-has-children">
@@ -237,41 +237,41 @@
 											<li class="menu-item-has-children">
 												<a href="listview.html">List</a>
 												<ul class="sub-menu">
-													<li><a href="listview.html">List View</a></li>
-													<li><a href="list-boxed-banner.html">List Boxed Banner</a></li>
-													<li><a href="list-full-banner.html">List Full Banner</a></li>
+													<li><a href="{{asset('assets/client/listview.html')}}">List View</a></li>
+													<li><a href="{{asset('assets/client/list-boxed-banner.html')}}">List Boxed Banner</a></li>
+													<li><a href="{{asset('assets/client/list-full-banner.html')}}">List Full Banner</a></li>
 												</ul>
 											</li>
 											<li class="menu-item-has-children">
-												<a href="gridview.html">Grid</a>
+												<a href="{{asset('assets/client/gridview.html')}}">Grid</a>
 												<ul class="sub-menu">
-													<li><a href="gridview.html">Grid View</a></li>
-													<li><a href="grid-boxed-banner.html">Grid Boxed Banner</a></li>
-													<li><a href="grid-full-banner.html">Grid Full Banner</a></li>
+													<li><a href="{{asset('assets/client/gridview.html')}}">Grid View</a></li>
+													<li><a href="{{asset('assets/client/grid-boxed-banner.html')}}">Grid Boxed Banner</a></li>
+													<li><a href="{{asset('assets/client/grid-full-banner.html')}}">Grid Full Banner</a></li>
 												</ul>
 											</li>
 											<li class="menu-item-has-children">
-												<a href="product.html">Product</a>
+												<a href="{{asset('assets/client/product.html')}}">Product</a>
 												<ul class="sub-menu">
-													<li><a href="product.html">Product Detail</a></li>
-													<li><a href="product-full-width.html">Product Full Width</a></li>
-													<li><a href="product-group.html">Product Group</a></li>
-													<li><a href="product-onsale.html">Product Onsale</a></li>
+													<li><a href="{{asset('assets/client/product.html')}}">Product Detail</a></li>
+													<li><a href="{{asset('assets/client/product-full-width.html')}}">Product Full Width</a></li>
+													<li><a href="{{asset('assets/client/product-group.html')}}">Product Group</a></li>
+													<li><a href="{{asset('assets/client/product-onsale.html')}}">Product Onsale</a></li>
 												</ul>
 											</li>
-											<li><a href="cart.html">Cart</a></li>
-											<li><a href="checkout.html">Checkout</a></li>
-											<li><a href="member-login.html">Member Login</a></li>
-											<li><a href="my-profile.html">My Profile</a></li>
+											<li><a href="{{asset('assets/client/cart.html')}}">Cart</a></li>
+											<li><a href="{{asset('assets/client/checkout.html')}}">Checkout</a></li>
+											<li><a href="{{asset('assets/client/member-login.html')}}">Member Login</a></li>
+											<li><a href="{{asset('assets/client/my-profile.html')}}">My Profile</a></li>
 										</ul>
 									</li>
 									<li class="menu-item-has-children">
-										<a href="blog.html">Blog</a>
+										<a href="{{asset('assets/client/blog.html')}}">Blog</a>
 										<ul class="sub-menu">
-											<li><a href="blog-list.html">Blog List</a></li>
-											<li><a href="blog.html">Blog List Large</a></li>
-											<li><a href="blog-grid.html">Blog Grid</a></li>
-											<li><a href="single.html">Blog Single</a></li>
+											<li><a href="{{asset('assets/client/blog-list.html')}}">Blog List</a></li>
+											<li><a href="{{asset('assets/client/blog.html')}}">Blog List Large</a></li>
+											<li><a href="{{asset('assets/client/blog-grid.html')}}">Blog Grid</a></li>
+											<li><a href="{{asset('assets/client/single.html')}}">Blog Single</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -289,7 +289,7 @@
 								</li>
 								<li>
 									<div class="mini-cart-box mini-cart1 aside-box">
-										<a class="mini-cart-link" href="cart.html" title="Cart">
+										<a class="mini-cart-link" href="{{asset('assets/client/cart.html')}}" title="Cart">
 											<span class="mini-cart-icon title18 dark"><i class="icon ion-bag"></i></span>
 											<span class="mini-cart-text">
 												<span class="mini-cart-number">4</span>
@@ -301,7 +301,7 @@
 											<div class="list-mini-cart-item">
 												<div class="product-mini-cart table-custom">
 													<div class="product-thumb">
-														<a href="detail.html" class="product-thumb-link"><img alt="" src="images/photos/glasses/dl-store-glasse-01.jpg"></a>
+														<a href="{{asset('assets/client/detail.html')}}" class="product-thumb-link"><img alt="" src="{{asset('assets/client/images/photos/glasses/dl-store-glasse-01.jpg')}}"></a>
 													</div>
 													<div class="product-info">
 														<h3 class="title14 product-title play-font"><a href="#">D&L SO REAL POP SUNGLASSES pink</a></h3>
@@ -315,7 +315,7 @@
 												</div>
 												<div class="product-mini-cart table-custom">
 													<div class="product-thumb">
-														<a href="detail.html" class="product-thumb-link"><img alt="" src="images/photos/glasses/dl-store-glasse-03.jpg"></a>
+														<a href="{{asset('assets/client/detail.html')}}" class="product-thumb-link"><img alt="" src="{{asset('assets/client/images/photos/glasses/dl-store-glasse-03.jpg')}}"></a>
 													</div>
 													<div class="product-info">
 														<h3 class="title14 product-title play-font"><a href="#">D&L SO REAL POP SUNGLASSES Yellow</a></h3>
@@ -329,7 +329,7 @@
 												</div>
 												<div class="product-mini-cart table-custom">
 													<div class="product-thumb">
-														<a href="detail.html" class="product-thumb-link"><img alt="" src="images/photos/glasses/dl-store-glasse-10.jpg"></a>
+														<a href="{{asset('assets/client/detail.html')}}" class="product-thumb-link"><img alt="" src="{{asset('assets/client/images/photos/glasses/dl-store-glasse-10.jpg')}}"></a>
 													</div>
 													<div class="product-info">
 														<h3 class="title14 product-title play-font"><a href="#">D&L SO REAL POP SUNGLASSES black</a></h3>
@@ -343,7 +343,7 @@
 												</div>
 												<div class="product-mini-cart table-custom">
 													<div class="product-thumb">
-														<a href="detail.html" class="product-thumb-link"><img alt="" src="images/photos/glasses/dl-store-glasse-02.jpg"></a>
+														<a href="{{asset('assets/client/detail.html')}}" class="product-thumb-link"><img alt="" src="{{asset('assets/client/images/photos/glasses/dl-store-glasse-02.jpg')}}"></a>
 													</div>
 													<div class="product-info">
 														<h3 class="title14 product-title play-font"><a href="#">D&L so real pop sunglass blue</a></h3>
@@ -384,10 +384,10 @@
 		<div class="container">
 			<div class="list-service-footer">
 				<ul class="list-none">
-					<li><a href="#"><img src="images/home/jewelry2/icon1.png" alt="" /></a> <span class="opaci">FREE DELIVERY FROM $99</span></li>
-					<li><a href="#"><img src="images/home/jewelry2/icon2.png" alt="" /></a> <span class="opaci">SECURE PAYMENT</span></li>
-					<li><a href="#"><img src="images/home/jewelry2/icon3.png" alt="" /></a> <span class="opaci">100% GUARANTEED</span></li>
-					<li><a href="#"><img src="images/home/jewelry2/icon4.png" alt="" /></a> <span class="opaci">MONEY BACK GUARANTEED</span></li>
+					<li><a href="#"><img src="{{asset('assets/client/images/home/jewelry2/icon1.png')}}" alt="" /></a> <span class="opaci">FREE DELIVERY FROM $99</span></li>
+					<li><a href="#"><img src="{{asset('assets/client/images/home/jewelry2/icon2.png')}}" alt="" /></a> <span class="opaci">SECURE PAYMENT</span></li>
+					<li><a href="#"><img src="{{asset('assets/client/images/home/jewelry2/icon3.png')}}" alt="" /></a> <span class="opaci">100% GUARANTEED</span></li>
+					<li><a href="#"><img src="{{asset('assets/client/images/home/jewelry2/icon4.png')}}" alt="" /></a> <span class="opaci">MONEY BACK GUARANTEED</span></li>
 				</ul>
 			</div>
 		</div>
@@ -409,7 +409,7 @@
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="block-footer2">
 								<div class="logo logo-footer2 text-center">
-									<a href="index-2.html">
+									<a href="{{asset('assets/client/index-2.html')}}">
 										<span class="logo-icon title24 round white bg-dark"><i class="fa fa-diamond"></i></span>
 										<strong class="play-font  title30 dark text-uppercase">BW-</strong>
 										<span class="play-font font-normal title30 dark">Store</span>
@@ -490,18 +490,18 @@
 	<!-- End Preload -->
 	<a href="#" class="scroll-top dark"><i class="fa fa-angle-up"></i></a>
 </div>
-<script src="js/libs/jquery-3.2.1.min.js"></script>
-<script src="js/libs/bootstrap.min.js"></script>
-<script src="js/libs/jquery.fancybox.min.js"></script>
-<script src="js/libs/jquery-ui.min.js"></script>
-<script src="js/libs/owl.carousel.min.js"></script>
-<script src="js/libs/jquery.jcarousellite.min.js"></script>
-<script src="js/libs/jquery.mCustomScrollbar.min.js"></script>
-<script src="js/libs/jquery.elevatezoom.min.js"></script>
-<script src="js/libs/popup.min.js"></script>
-<script src="js/libs/timecircles.min.js"></script>
-<script src="js/libs/wow.min.js"></script>
-<script src="js/theme.js"></script>
+<script src="js/libs/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/client/js/libs/jquery-3.2.1.min.js')}}"></script>
+<script src="js/libs/jquery.fancybox.min.js')}}"></script>
+<script src="{{asset('assets/client/js/libs/jquery-ui.min.js')}}"></script>
+<script src="{{asset('assets/client/js/libs/owl.carousel.min.js')}}"></script>
+<script src="{{asset('assets/client/js/libs/jquery.jcarousellite.min.js')}}"></script>
+<script src="{{asset('assets/client/js/libs/jquery.mCustomScrollbar.min.js')}}"></script>
+<script src="{{asset('assets/client/js/libs/jquery.elevatezoom.min.js')}}"></script>
+<script src="{{asset('assets/client/js/libs/popup.min.js')}}"></script>
+<script src="{{asset('assets/client/js/libs/timecircles.min.js')}}"></script>
+<script src="{{asset('assets/client/js/libs/wow.min.js')}}"></script>
+<script src="{{asset('assets/client/js/theme.js')}}"></script>
 </body>
 
 <!-- Mirrored from demo.7uptheme.com/html/bw-store/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Feb 2019 14:26:51 GMT -->

@@ -9,19 +9,19 @@
     <div class="page-content">
         <!-- BEGIN PAGE HEADER-->
         <!-- BEGIN PAGE TITLE-->
-        <h1 class="page-title"> Contact
-            <small>Danh sách contact</small>
+        <h1 class="page-title"> Liên hệ
+            <small>Danh sách liên hệ</small>
         </h1>
         <!-- END PAGE TITLE-->
         <!-- BEGIN PAGE BAR -->
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li>
-                    <a href="index.html">Trang chủ</a>
+                    <span>Trang chủ</span>
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <span>Contact</span>
+                    <span>Liên hệ</span>
                 </li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
                     <div class="portlet-title">
                         <div class="caption font-dark">
                             <i class="fa fa-navicon font-dark"></i>
-                            <span class="caption-subject bold uppercase"> Contact</span>
+                            <span class="caption-subject bold uppercase"> Liên hệ</span>
                         </div>
                     </div>
                     <div class="portlet-body">

@@ -140,7 +140,27 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('order_details.create')}}" class="nav-link ">
+                    <a href="{{route('banners.create')}}" class="nav-link ">
+                        <span class="title">Thêm mới</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item ">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="fa fa-navicon"></i>
+                <span class="title">Phản hồi</span>
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item">
+                    <a href="{{route('reviews.index')}}" class="nav-link ">
+                        <span class="title">Danh sách</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('reviews.create')}}" class="nav-link ">
                         <span class="title">Thêm mới</span>
                     </a>
                 </li>

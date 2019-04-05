@@ -7,27 +7,23 @@
 	<div class="page-content">
 	    <!-- BEGIN PAGE HEADER-->
 	    <!-- BEGIN PAGE TITLE-->
-	    <h1 class="page-title"> Chi tiết đơn hàng
-	        <small>Thêm mới chi tiết đơn hàng</small>
+	    <h1 class="page-title"> Phản hồi
+	        <small>Thêm mới phản hồi</small>
 	    </h1>
 	    <!-- END PAGE TITLE-->
 	    <!-- BEGIN PAGE BAR -->
 	    <div class="page-bar">
 	        <ul class="page-breadcrumb">
 	            <li>
-                    <span>Trang chủ</span>
+	                <span>Trang chủ</span>
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-	                <span>Chi tiết đơn hàng</span>
+	                <span>Phản hồi</span>
 	                <i class="fa fa-angle-right"></i>
 	            </li>
 	            <li>
-                    <span>Chi Tiết</span>
-                    <i class="fa fa-angle-right"></i>
-                </li>
-                <li>
-                    <span> {{$order_detail->orders->users->fullname}} </span>
+	                <span>Thêm mới</span>
 	            </li>
 	        </ul>
 	    </div>
@@ -40,55 +36,53 @@
                         <div class="portlet box blue ">
                             <div class="portlet-title">
                                 <div class="caption">
-                                    <i class="fa fa-navicon"></i>Chi tiết đơn hàng</div>
+                                    <i class="fa fa-navicon"></i>Phản hồi </div>
                             </div>
                             <div class="portlet-body form">
                                 <!-- BEGIN FORM-->
-                                <form action="#" method="POST" class="form-horizontal form-bordered">
+                                <form action="{{route('contacts.store')}}" method="POST" class="form-horizontal form-bordered" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Khách hàng</label>
+                                            <label class="control-label col-md-3">Khách hàng</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order_detail->orders->users->fullname}}  </p>
+                                                <input type="text" name="user_id" placeholder="Khách hàng" class="form-control" />
+                                                {{-- <span style="color: red"> Error </span> --}}
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Sản phẩm</label>
+                                            <label class="control-label col-md-3">Sản phẩm</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order_detail->products->name}}  </p>
+                                                <select class="form-control" name="product_id">
+                                                    @foreach ($products as $product)
+                                                        <option value="{{$product->id}}">{{$product->name}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Giá</label>
+                                            <label class="control-label col-md-3">Đánh giá</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order_detail->price}}  </p>
+                                                <input type="text" name="rating" placeholder="Đánh giá" class="form-control" />
+                                                {{-- <span style="color: red"> Error </span> --}}
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label">Số lượng</label>
+                                        </div>                                  
+                                         <div class="form-group">
+                                            <label class="control-label col-md-3">Nội dung</label>
                                             <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order_detail->quatity}}  </p>
+                                                <input type="text" name="content" placeholder="Nội dung" class="form-control" />
+                                                {{-- <span style="color: red"> Error </span> --}}
                                             </div>
-                                        </div>    
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label">Chiết khấu</label>
-                                            <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order_detail->discount}}  </p>
-                                            </div>
-                                        </div> 
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label">Tổng tính</label>
-                                            <div class="col-md-9">
-                                                <p class="form-control-static">  {{$order_detail->subtotal}}  </p>
-                                            </div>
-                                        </div>                               
+                                        </div>                              
                                     </div>
                                     <div class="form-actions">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="row">
                                                     <div class="col-md-offset-3 col-md-9">
-                                                        <a href="{{route('order_details.index')}}" class="btn default">Quay lại</a>
+                                                        <button type="submit" class="btn green">
+                                                            <i class="fa fa-check"></i> Gửi</button>
+                                                        <a href="{{route('reviews.index')}}" class="btn default">Quay lại</a>
                                                     </div>
                                                 </div>
                                             </div>

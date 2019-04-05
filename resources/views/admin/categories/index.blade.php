@@ -17,7 +17,7 @@
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li>
-                    <a href="index.html">Trang chủ</a>
+                    <span>Trang chủ</span>
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>

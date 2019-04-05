@@ -25,7 +25,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::resource('products', 'ProductController')->except('destroy');
     Route::get('products/destroy/{slug}', 'ProductController@destroy')->name('products.destroy');
     Route::resource('banners', 'BannerController')->except('destroy');
-    Route::get(' /destroy/{id}', 'BannerController@destroy')->name('banners.destroy');
+    Route::get(' banners/destroy/{id}', 'BannerController@destroy')->name('banners.destroy');
     Route::resource('users', 'UserController')->except('destroy');
     Route::get('users/destroy/{id}', 'UserController@destroy')->name('users.destroy');
     Route::resource('contacts', 'ContactController')->except('destroy');
@@ -35,4 +35,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('orders/destroy/{id}', 'OrderController@destroy')->name('orders.destroy');
     Route::resource('order_details', 'Order_detailController')->except('destroy');
     Route::get('order_details/destroy/{id}', 'Order_detailController@destroy')->name('order_details.destroy');
+    Route::resource('reviews', 'ReviewController')->except('destroy');
+    Route::get('reviews/destroy/{id}', 'ReviewController@destroy')->name('orders.destroy');
 });
